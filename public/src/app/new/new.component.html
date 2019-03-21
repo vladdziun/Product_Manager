@@ -1,0 +1,15 @@
+<h2>PPM - Project Product Management</h2>
+<button [routerLink]="['/']">Home</button>
+<button [routerLink]="['/new']">Product Creation</button>
+<button [routerLink]="['/products']">Product List</button><br>
+<h3>Create a New Product</h3>
+<p> {{ newProduct | json }} </p>
+<form (submit)="addProduct()" class="postForm">
+  {{errors.title.message}}<br>
+  Title: <input type="text" name="newProduct.title" [(ngModel)]="newProduct.title"><br>
+  {{errors.price.message}}<br>
+  Price: <input type="text" name="newProduct.price" [(ngModel)]="newProduct.price"><br>
+  {{errors.url.message}}<br>
+  Url: <input type="text" name="newProduct.url" [(ngModel)]="newProduct.url"><br>
+  <button>Submit</button>
+</form>

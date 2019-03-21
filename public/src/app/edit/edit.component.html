@@ -1,0 +1,11 @@
+<h2>PPM - Project Product Management</h2>
+<button [routerLink]="['/']" >Home</button>
+<button [routerLink]="['/new']">Product Creation</button>
+<button [routerLink]="['/products']">Product List</button><br>
+<h3>Edit Product</h3>
+<form (submit)="updateProduct()" class="postForm">
+  Title: <input type="text" name="updatedProduct.title" [(ngModel)]="updatedProduct.title"><br>
+  Price: <input type="text" name="updatedProduct.price" [(ngModel)]="updatedProduct.price"><br>
+  Url: <input type="text" name="updatedProduct.url" [(ngModel)]="updatedProduct.url"><br>
+  <button>Submit</button>
+</form>

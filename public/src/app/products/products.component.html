@@ -1,0 +1,13 @@
+<h2>PPM - Project Product Management</h2>
+<button [routerLink]="['/']" >Home</button>
+<button [routerLink]="['/new']">Product Creation</button>
+<button [routerLink]="['/products']">Product List</button><br>
+<h3>Products list</h3>
+<div *ngFor = "let p of products">
+  <p>{{p.title}}</p>
+  <p>{{p.price}}</p>
+  <img style = "width: 200px; height: 200px;" src ="{{p.url}}">
+  <br>
+  <button [routerLink]="['/edit/',p._id]">Edit</button>
+  <button (click) = "delete(p._id)">Delete</button>
+</div>
